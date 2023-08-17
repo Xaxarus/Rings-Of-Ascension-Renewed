@@ -1,0 +1,18 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+issueTrackerURL="https://github.com/Xaxarus/RingsOfAscension/issues"
+license="MIT"
+[[mods]]
+modId="ringsofascension"
+version="2.0.0"
+displayName="Rings of Ascension Renewed"
+displayURL="https://github.com/Xaxarus/RingsOfAscension/releases"
+description='''
+Rings of Ascension is a mod that uses the Curios API to add 20+ new rings to your minecraft. Each ring has its own special effect that is activated when the ring is equipped.
+'''
+[[dependencies.ringsofascension]]
+    modId="curios"
+    mandatory=true
+    versionRange="[1.20,)"
+    ordering="NONE"
+    side="BOTH"
