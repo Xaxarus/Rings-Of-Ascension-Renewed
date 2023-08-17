@@ -14,7 +14,7 @@ apply plugin: 'maven-publish'
 
 version = '1.0.1'
 group = 'com.focamacho'
-archivesBaseName = 'RingsOfAscension-1.19'
+archivesBaseName = 'Rings-Of-Ascension-Renewed-1.20'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -27,7 +27,7 @@ tasks.withType(JavaCompile) {
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
 minecraft {
-    mappings channel: 'official', version: '1.19'
+    mappings channel: 'official', version: '1.20'
     runs {
         client {
             workingDirectory project.file('run')
@@ -82,21 +82,21 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19-41.0.100'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.1.43'
 	
-	runtimeOnly "top.theillusivec4.curios:curios-forge:1.19-5.1.0.4"
-    compileOnly "top.theillusivec4.curios:curios-forge:1.19-5.1.0.4:api"
+	runtimeOnly "top.theillusivec4.curios:curios-forge:5.2.0-beta.3+1.20.1"
+    compileOnly "top.theillusivec4.curios:curios-forge:5.2.0-beta.3+1.20.1:api"
 }
 
 jar {
     manifest {
         attributes([
-            "Specification-Title": "ringsofascension",
-            "Specification-Vendor": "Focamacho",
+            "Specification-Title": "Rings-Of-Ascension-Renewed",
+            "Specification-Vendor": "Xaxarus",
             "Specification-Version": "1",
             "Implementation-Title": project.name,
             "Implementation-Version": project.version,
-            "Implementation-Vendor" :"Focamacho",
+            "Implementation-Vendor" :"Xaxarus",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
